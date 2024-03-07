@@ -1,0 +1,43 @@
+@use './variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-font: #{$cor-font-preto};
+  --color-background: #{$cor-background-branco};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-font: #{$cor-font-branco};
+    --color-background: #{$cor-background-preto};
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  color: var(--color-font);
+  background: var(--color-background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

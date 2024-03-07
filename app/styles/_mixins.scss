@@ -1,0 +1,34 @@
+//  FLEX-ALIGN
+@mixin flex-position(
+  $display,
+  $flex-direction,
+  $margin,
+  $justify-content,
+  $text-align,
+  $align-items
+){
+  display: $display;
+  flex-direction: $flex-direction;
+  margin: $margin;
+  justify-content: $justify-content;
+  text-align: $text-align;
+  align-items: $align-items;
+}
+
+
+//  MEDIA-QUERY
+@mixin viewport($breakpoints){
+  $devices:(
+    xs: 320px,
+    sm: 480px,
+    smd: 600px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  );
+  $breakpoint: map-get($devices, $breakpoints);
+  
+  @media(max-width: $breakpoint){
+    @content
+  }
+}

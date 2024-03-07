@@ -1,0 +1,15 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.home{
+  @include flex-position(
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+  width: 100vw;
+  height: 100vh;
+}
