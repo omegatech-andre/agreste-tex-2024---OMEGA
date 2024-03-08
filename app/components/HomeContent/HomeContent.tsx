@@ -14,7 +14,7 @@ export default function HomeContent() {
     // setIsVisible(!isVisible)
   }
 
-  setTimeout(toogleFunction, 3300)
+  setTimeout(toogleFunction, 4300)
 
   return (
     <>
