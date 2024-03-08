@@ -36,6 +36,15 @@ a {
   text-decoration: none;
 }
 
+::selection{
+  color: var(--color-font);
+  background-color: #ff0000d7;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

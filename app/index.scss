@@ -2,14 +2,22 @@
 @use './styles/mixins' as *;
 
 .home{
-  @include flex-position(
-    flex,
-    column,
-    auto,
-    center,
-    center,
-    center
-  );
   width: 100vw;
   height: 100vh;
+  background-image: url('../public/wallpaper-oficial.png');
+  background-size: cover;
+
+  &__content{
+    @include flex-position(
+      flex,
+      column,
+      auto,
+      center,
+      center,
+      center
+    );
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+  }
 }

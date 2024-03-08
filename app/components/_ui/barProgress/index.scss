@@ -1,0 +1,61 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+@keyframes progressAnimation{
+  0%{
+    width: 0%;
+  }
+  89% {
+    width: 75%;
+    animation-timing-function: step-end;
+  }
+  97% {
+    width: 80%;
+    animation-timing-function: ease;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+@keyframes fadeout {
+  0%, 99%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.barprogress {
+  position: relative;
+  margin: .7rem;
+  margin-bottom: 0;
+  width: 5rem;
+  height: .5rem;
+  border-radius: 1rem;
+  background-color: $cor-cinza;
+  animation: fadeout 4.3s forwards;
+
+  &__level{
+    position: absolute;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: $cor-vermelho;
+    animation: progressAnimation 4s forwards;
+  }
+}
+
+@include viewport(sm){
+  .barprogress {
+    height: .45rem;
+  }
+}
+
+@include viewport(xs){
+  .barprogress {
+    width: 4rem;
+    height: .4rem;
+    margin: .7rem;
+  }
+}

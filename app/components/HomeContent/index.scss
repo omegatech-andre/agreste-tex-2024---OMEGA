@@ -1,0 +1,159 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+
+@keyframes openContent {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 25rem
+  }
+}
+
+.homecontent{
+  @include flex-position(
+    flex,
+    column,
+    auto,
+    center,
+    center,
+    center
+  );
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 48rem;
+  max-width: 100vw;
+  max-height: 100vh;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px $cor-preto-shadow;
+  background: var(--color-background);
+}
+
+.homecontent__main{
+  .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: auto;
+    gap: .7rem;
+    margin-bottom: .5rem;
+
+    img{
+      width: 20rem;
+      height: 12rem;
+    }
+  }
+  
+  .top__icons{
+    display: flex;
+    justify-content: center;
+    width: 22rem;
+
+    svg{
+      display: flex;
+      margin: 0 .3rem;
+      color: $cor-vermelho;
+    }
+  }
+
+  .mid{
+    display: none;
+  }
+
+  .bot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: auto;
+
+    h1{
+      font-size: $tam-font-20;
+      color: $cor-vermelho;
+    }
+    
+    p{
+      font-size: $tam-font-12;
+      color: $cor-vermelho;
+    }
+  }
+}
+
+.homecontent__mainvisible{
+  .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 22rem;
+    height: auto;
+    gap: .5rem;
+    margin-bottom: 1rem;
+    
+    img{
+      width: 7rem;
+      height: 4.2rem;
+      transition-duration: .7s;
+    }
+  }
+  
+  .top__icons{
+    display: flex;
+    justify-content: center;
+    transition-duration: .7s;
+    width: 12rem;
+
+    svg{
+      width: 1.5rem;
+      display: flex;
+      margin: 0 0 0 .5rem;
+      color: $cor-vermelho;
+      transition-duration: .7s;
+    }
+  }
+
+  .mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: 25rem;
+    background-color: rgb(40, 65, 4);
+    animation: openContent .7s ease;
+  }
+
+  .bot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: auto;
+    margin-top: 1rem;
+    transition-duration: .7s;
+    
+    h1{
+      font-size: $tam-font-18;
+      color: $cor-vermelho;
+      transition-duration: .7s;
+    }
+    
+    p{
+      font-size: $tam-font-10;
+      color: $cor-vermelho;
+      transition-duration: .7s;
+    }
+  }
+}
+
+button{
+  margin: 2rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}

@@ -1,10 +1,13 @@
+import HomeContent from './components/HomeContent/HomeContent'
 import './index.scss'
 
 export default function Home() {
   return (
     <>
       <div className="home">
-        <h1>home</h1>
+        <div className="home__content">
+          <HomeContent />
+        </div>
       </div>
     </>
   )
