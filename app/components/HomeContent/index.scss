@@ -20,6 +20,7 @@
     center,
     center
   );
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 25rem;
@@ -32,6 +33,20 @@
   background: var(--color-background);
 }
 
+.wallpapertop{
+  position: absolute;
+  width: 8rem;
+  top: 0;
+  left: 0;
+}
+
+.wallpaperbot{
+  position: absolute;
+  width: 25rem;
+  bottom: 0;
+  left: 0;
+}
+
 .homecontent__main{
   .top{
     display: flex;
@@ -40,7 +55,7 @@
     align-items: center;
     width: 22rem;
     height: auto;
-    gap: .7rem;
+    gap: 1rem;
     margin-bottom: .5rem;
 
     img{
@@ -99,14 +114,14 @@
     img{
       width: 7rem;
       height: 4.2rem;
-      transition-duration: .7s;
+      transition-duration: .3s;
     }
   }
   
   .top__icons{
     display: flex;
     justify-content: center;
-    transition-duration: .7s;
+    transition-duration: .3s;
     width: 12rem;
 
     svg{
@@ -114,7 +129,7 @@
       display: flex;
       margin: 0 0 0 .5rem;
       color: $cor-vermelho;
-      transition-duration: .7s;
+      transition-duration: .3s;
     }
   }
 
@@ -125,7 +140,7 @@
     width: 22rem;
     height: 25rem;
     background-color: rgb(40, 65, 4);
-    animation: openContent .7s ease;
+    animation: openContent .3s ease;
   }
 
   .bot{
@@ -136,18 +151,18 @@
     width: 22rem;
     height: auto;
     margin-top: 1rem;
-    transition-duration: .7s;
+    transition-duration: .3s;
     
     h1{
       font-size: $tam-font-18;
       color: $cor-vermelho;
-      transition-duration: .7s;
+      transition-duration: .3s;
     }
     
     p{
       font-size: $tam-font-10;
       color: $cor-vermelho;
-      transition-duration: .7s;
+      transition-duration: .3s;
     }
   }
 }

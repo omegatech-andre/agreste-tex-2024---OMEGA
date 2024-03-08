@@ -10,15 +10,16 @@ export default function HomeContent() {
   const [isVisible, setIsVisible] = useState(false)
 
   const toogleFunction = () =>{
-    setIsVisible(true)
-    // setIsVisible(!isVisible)
+    // setIsVisible(true)
+    setIsVisible(!isVisible)
   }
 
-  setTimeout(toogleFunction, 4300)
+  // setTimeout(toogleFunction, 4300)
 
   return (
     <>
       <div className="homecontent">
+        <img className='wallpapertop' src="./wallpaper-top-oficial.png" alt="wallpaper" />
         <div className={ isVisible ? 'homecontent__mainvisible' : 'homecontent__main'}>
           <div className="top">
             <img src="./logo-oficial.png" alt="" />
@@ -40,8 +41,9 @@ export default function HomeContent() {
             <BarProgress />
           </div>
         </div>
+        <img className='wallpaperbot' src="./wallpaper-bottom-oficial.png" alt="wallpaper" />
       </div>
-      {/* <button onClick={toogleFunction}>toogle</button> */}
+      <button onClick={toogleFunction}>toogle</button>
     </>
   )
 }
