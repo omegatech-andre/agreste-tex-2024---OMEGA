@@ -10,11 +10,11 @@ export default function HomeContent() {
   const [isVisible, setIsVisible] = useState(false)
 
   const toogleFunction = () =>{
-    // setIsVisible(true)
-    setIsVisible(!isVisible)
+    setIsVisible(true)
+    // setIsVisible(!isVisible)
   }
 
-  // setTimeout(toogleFunction, 4300)
+  setTimeout(toogleFunction, 4300)
 
   return (
     <>
@@ -43,7 +43,7 @@ export default function HomeContent() {
         </div>
         <img className='wallpaperbot' src="./wallpaper-bottom-oficial.png" alt="wallpaper" />
       </div>
-      <button onClick={toogleFunction}>toogle</button>
+      {/* <button onClick={toogleFunction}>toogle</button> */}
     </>
   )
 }
