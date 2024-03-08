@@ -48,19 +48,21 @@
 }
 
 .homecontent__main{
+  z-index: 1;
+  max-width: 90vw;
   .top{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 22rem;
+    max-width: 90vw;
     height: auto;
     gap: 1rem;
     margin-bottom: .5rem;
 
     img{
       width: 20rem;
-      height: 12rem;
     }
   }
   
@@ -68,6 +70,7 @@
     display: flex;
     justify-content: center;
     width: 22rem;
+    max-width: 90vw;
 
     svg{
       display: flex;
@@ -86,6 +89,7 @@
     justify-content: center;
     align-items: center;
     width: 22rem;
+    max-width: 90vw;
     height: auto;
 
     h1{
@@ -101,6 +105,7 @@
 }
 
 .homecontent__mainvisible{
+  z-index: 1;
   .top{
     display: flex;
     flex-direction: column;
@@ -113,7 +118,6 @@
     
     img{
       width: 7rem;
-      height: 4.2rem;
       transition-duration: .3s;
     }
   }
@@ -166,6 +170,115 @@
     }
   }
 }
+
+@include viewport(sm){
+  .wallpapertop{
+    width: 6.5rem;
+  }
+
+  .homecontent__main{
+    .top{
+      img{
+        max-width: 80vw;
+      }
+    }
+    
+    .top__icons svg{
+      width: 1.5rem;
+    }
+  }
+
+  .homecontent__mainvisible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .top{
+      max-width: 90vw;
+    }
+  
+    .mid{
+      max-width: 96vw;
+    }
+
+    .bot{
+      h1{
+        font-size: $tam-font-16;
+      }
+      
+      p{
+        font-size: $tam-font-8;
+      }
+    }
+  }
+}
+
+
+@include viewport(xs){
+  .wallpapertop{
+    width: 6rem;
+  }
+
+  .wallpaperbot{
+    width: 100vw;
+  }
+
+  .homecontent__main{
+    .top{
+      img{
+        max-width: 80vw;
+      }
+    }
+    
+    .top__icons svg{
+      width: 1.5rem;
+    }
+
+    .bot{
+      h1{
+        font-size: $tam-font-18;
+      }
+
+      p{
+        font-size: $tam-font-10;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 button{
   margin: 2rem;
