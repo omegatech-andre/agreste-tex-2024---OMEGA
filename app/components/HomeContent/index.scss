@@ -7,7 +7,25 @@
     height: 0;
   }
   100%{
-    height: 25rem
+    height: 25rem;
+  }
+}
+
+@keyframes openContenth600 {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 20rem;
+  }
+}
+
+@keyframes openContenth520 {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 15rem;
   }
 }
 
@@ -94,12 +112,10 @@
 
     h1{
       font-size: $tam-font-20;
-      color: $cor-vermelho;
     }
     
     p{
       font-size: $tam-font-12;
-      color: $cor-vermelho;
     }
   }
 }
@@ -117,15 +133,16 @@
     margin-bottom: 1rem;
     
     img{
+      display: flex;
       width: 7rem;
-      transition-duration: .3s;
+      transition-duration: .15s;
     }
   }
   
   .top__icons{
     display: flex;
     justify-content: center;
-    transition-duration: .3s;
+    transition-duration: .15s;
     width: 12rem;
 
     svg{
@@ -133,7 +150,7 @@
       display: flex;
       margin: 0 0 0 .5rem;
       color: $cor-vermelho;
-      transition-duration: .3s;
+      transition-duration: .15s;
     }
   }
 
@@ -143,8 +160,7 @@
     align-items: center;
     width: 22rem;
     height: 25rem;
-    background-color: rgb(40, 65, 4);
-    animation: openContent .3s ease;
+    animation: openContent .15s ease;
   }
 
   .bot{
@@ -155,18 +171,16 @@
     width: 22rem;
     height: auto;
     margin-top: 1rem;
-    transition-duration: .3s;
+    // transition-duration: 13.15s;
     
     h1{
       font-size: $tam-font-18;
-      color: $cor-vermelho;
-      transition-duration: .3s;
+      // transition-duration: 13.15s;
     }
     
     p{
       font-size: $tam-font-10;
-      color: $cor-vermelho;
-      transition-duration: .3s;
+      // transition-duration: 13.15s;
     }
   }
 }
@@ -243,45 +257,32 @@
       }
     }
   }
+
+  .homecontent__mainvisible{
+    .top{
+      align-items: end;
+
+      img{
+        width: 7rem;
+      }
+    }
+  }
 }
 
+@include viewportH(h600){
+  .homecontent__mainvisible{
+    .mid{
+      height: 20rem;
+      animation: openContenth600 .15s ease;
+    }
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-button{
-  margin: 2rem;
-  padding: .5rem 1rem;
-  cursor: pointer;
+@include viewportH(h520){
+  .homecontent__mainvisible{
+    .mid{
+      height: 15rem;
+      animation: openContenth520 .15s ease;
+    }
+  }
 }

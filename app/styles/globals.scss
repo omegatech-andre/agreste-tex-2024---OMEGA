@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './mixins' as *;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -38,7 +39,7 @@ a {
 
 ::selection{
   color: var(--color-font);
-  background-color: #ff0000d7;
+  background-color: $cor-vermelho;
 }
 
 ::-webkit-scrollbar {
@@ -48,5 +49,14 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+button{
+  @include buttonaction($tam-font-18);
+  width: 15rem;
+
+  &:hover{
+    @include buttonactionhover;
   }
 }

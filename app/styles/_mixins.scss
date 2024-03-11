@@ -1,3 +1,5 @@
+@use '../styles/variables' as *;
+
 //  FLEX-ALIGN
 @mixin flex-position(
   $display,
@@ -13,7 +15,7 @@
   justify-content: $justify-content;
   text-align: $text-align;
   align-items: $align-items;
-}
+};
 
 
 //  MEDIA-QUERY
@@ -31,4 +33,38 @@
   @media(max-width: $breakpoint){
     @content
   }
-}
+};
+
+@mixin viewportH($breakpoints){
+  $devices:(
+    h520: 520px,
+    h600: 600px
+  );
+  $breakpoint: map-get($devices, $breakpoints);
+  
+  @media(max-height: $breakpoint){
+    @content
+  }
+};
+
+
+//  BUTTON
+@mixin buttonaction($tam-font){
+  padding: .5rem 2rem;
+  background-color: $cor-vermelho;
+  border-radius: $borda-pequena;
+  border: $borda;
+  box-shadow: $borda-shadow;
+  color: $cor-font-branco;
+  font-size: $tam-font;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition-duration: .2s;
+};
+
+@mixin buttonactionhover{
+  background-color: $cor-vermelho-hover;
+  transition-duration: .2s;
+  transform: translateY(-.1rem);
+};

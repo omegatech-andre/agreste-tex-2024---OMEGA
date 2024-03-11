@@ -3,8 +3,8 @@ import { useState } from 'react'
 import './index.scss'
 import BarProgress from '../_ui/barProgress/BarProgress'
 import { SiInstagram, SiLinkedin, SiYoutube, SiTiktok, SiWhatsapp, SiFacebook } from "react-icons/si"
-import Image from 'next/image'
 import Link from 'next/link'
+import BoxForm from '../_ui/boxForm/BoxForm'
 
 export default function HomeContent() {
   const [isVisible, setIsVisible] = useState(false)
@@ -33,7 +33,7 @@ export default function HomeContent() {
             </div>
           </div>
           <div className="mid">
-            <p>content mid</p>
+            <BoxForm />
           </div>
           <div className="bot">
             <h1>Ômega Screen Indústria</h1>
