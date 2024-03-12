@@ -8,6 +8,7 @@ import BoxForm from '../_ui/boxForm/BoxForm'
 
 export default function HomeContent() {
   const [isVisible, setIsVisible] = useState(false)
+  const [formIsHidden, setFormIsHidden] = useState(false)
 
   const toogleFunction = () =>{
     setIsVisible(true)
@@ -21,7 +22,7 @@ export default function HomeContent() {
       <div className="homecontent">
         <img className='wallpapertop' src="./wallpaper-top-oficial.png" alt="wallpaper" />
         <div className={ isVisible ? 'homecontent__mainvisible' : 'homecontent__main'}>
-          <div className="top">
+          <div className={ formIsHidden ? 'topHidden' : 'top'}>
             <img src="./logo-oficial.png" alt="" />
             <div className="top__icons">
               <Link href="https://www.instagram.com/omegascreen.ind/" target="_blank"><SiInstagram size={30} /></Link>
@@ -33,7 +34,7 @@ export default function HomeContent() {
             </div>
           </div>
           <div className="mid">
-            <BoxForm />
+            <BoxForm statusForm={formIsHidden} handleVisibleForm={setFormIsHidden}/>
           </div>
           <div className="bot">
             <h1>Ômega Screen Indústria</h1>

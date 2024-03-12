@@ -138,6 +138,10 @@
       transition-duration: .15s;
     }
   }
+
+  .topHidden{
+    display: none;
+  }
   
   .top__icons{
     display: flex;
@@ -159,7 +163,7 @@
     justify-content: center;
     align-items: center;
     width: 22rem;
-    height: 25rem;
+    min-height: 25rem;
     animation: openContent .15s ease;
   }
 
@@ -272,7 +276,7 @@
 @include viewportH(h600){
   .homecontent__mainvisible{
     .mid{
-      height: 20rem;
+      min-height: 18rem;
       animation: openContenth600 .15s ease;
     }
   }
@@ -281,7 +285,7 @@
 @include viewportH(h520){
   .homecontent__mainvisible{
     .mid{
-      height: 15rem;
+      min-height: 15rem;
       animation: openContenth520 .15s ease;
     }
   }
