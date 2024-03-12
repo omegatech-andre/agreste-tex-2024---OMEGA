@@ -32,12 +32,16 @@
 
   p{
     font-size: $tam-font-14;
-    margin: 0.5rem 0 1rem;
+    margin: 1rem 0 2rem;
   }
 }
 
 @include viewportH(h520){
   .boxform{
     height: 15rem;
+
+    p{
+      margin: .5rem 0 1rem;
+    }
   }
 }
