@@ -6,6 +6,27 @@
     opacity: 0;
   }
   100%{
+    min-height: 23rem;
+    opacity: 1;
+  }
+}
+
+@keyframes openBoxContent600 {
+  0%, 50%{
+    opacity: 0;
+  }
+  100%{
+    min-height: 18rem;
+    opacity: 1;
+  }
+}
+
+@keyframes openBoxContent520 {
+  0%, 50%{
+    opacity: 0;
+  }
+  100%{
+    min-height: 15rem;
     opacity: 1;
   }
 }
@@ -90,12 +111,13 @@
 
 @include viewportH(h600){
   .boxform.boxformopen{
-    margin-top: 2.4rem;
-    margin-bottom: .5rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0;
   }
 
   .boxform{
     min-height: 18rem;
+    animation: openBoxContent600 .15s ease;
 
     svg{
       margin-bottom: .5rem;
@@ -108,16 +130,6 @@
     h2{
       font-size: $tam-font-18;
       margin-bottom: .5rem;
-    }
-
-    div{
-      .divInputs{
-        height: 4rem;
-      }
-
-      input{
-        padding: .5rem;
-      }
     }
 
     p{
@@ -133,13 +145,14 @@
 
 @include viewportH(h520){
   .boxform.boxformopen{
-    margin-top: .5rem;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
   .boxform{
-    padding: .5rem 0;
+    padding: .5rem .5rem;
     min-height: 15rem;
+    animation: openBoxContent520 .15s ease;
 
     p{
       margin: .5rem 0 1rem;

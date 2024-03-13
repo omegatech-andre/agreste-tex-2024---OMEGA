@@ -12,7 +12,7 @@ export default function HomeContent() {
 
   const toogleFunction = () =>{
     setIsVisible(true)
-    // setIsVisible(!isVisible)
+    // setIsVisible(!isVisible);
   }
 
   setTimeout(toogleFunction, 4300)

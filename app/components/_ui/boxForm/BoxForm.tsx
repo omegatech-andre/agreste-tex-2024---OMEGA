@@ -41,9 +41,11 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
   const submitForm = (data: FormTypes) => {
     setData(data)
     setPosted(true)
+    reset()
   }
 
-
+  console.log('data', data)
+  console.log('err', error)
 
   if (isFormOpen) {
     return (
@@ -88,7 +90,7 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
                 {errors.email && (<span>{errors.email.message}</span>)}
               </div>
             </div>
-            <button className='buttonFormOpen' type="submit">enviar</button>
+            <input type="submit" value="enviar" />
           </form>
         </div>
       </>
