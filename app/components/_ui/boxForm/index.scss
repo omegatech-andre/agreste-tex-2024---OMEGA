@@ -89,6 +89,13 @@
     margin-bottom: 0;
   }
 
+  &__btnTratado{
+    margin-top: 2rem;
+    a{
+      margin: auto;
+    }
+  }
+
   .spanTratado{
     padding: .5rem;
     color: var(--color-font);

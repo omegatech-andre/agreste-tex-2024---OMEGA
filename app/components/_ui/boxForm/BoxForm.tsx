@@ -8,6 +8,7 @@ import usePost from '@/app/hooks/usePost'
 import { MdKeyboardBackspace } from 'react-icons/md'
 import { VscError, VscLoading } from 'react-icons/vsc'
 import { SlCheck } from 'react-icons/sl'
+import Link from 'next/link'
 
 export interface FormTypes {
   name: string,
@@ -87,6 +88,9 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
           <SlCheck id='success' size={50} />
           <h1>Formulário enviado!!</h1>
           <p className='pTratado'>Nós entraremos em contato com você em breve</p>
+          <div className='boxform__btnTratado'>
+          <Link href='https://www.omegascreen.com.br/'><button className='button'>Site Oficial</button></Link>
+          </div>
         </div>
       </>
     )
