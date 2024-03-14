@@ -12,7 +12,6 @@ export default function HomeContent() {
 
   const toogleFunction = () =>{
     setIsVisible(true)
-    // setIsVisible(!isVisible);
   }
 
   setTimeout(toogleFunction, 4300)
@@ -44,7 +43,6 @@ export default function HomeContent() {
         </div>
         <img className='wallpaperbot' src="./wallpaper-bottom-oficial.png" alt="wallpaper" />
       </div>
-      {/* <button onClick={toogleFunction}>toogle</button> */}
     </>
   )
 }
