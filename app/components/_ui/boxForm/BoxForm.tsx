@@ -6,6 +6,8 @@ import { formSchema } from '@/app/schemas/formSchema'
 import { useForm } from 'react-hook-form'
 import usePost from '@/app/hooks/usePost'
 import { MdKeyboardBackspace } from 'react-icons/md'
+import { VscError, VscLoading } from 'react-icons/vsc'
+import { SlCheck } from 'react-icons/sl'
 
 export interface FormTypes {
   name: string,
@@ -44,8 +46,51 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
     reset()
   }
 
+  const resetPage = () => {
+    window.location.reload()
+  }
+
   console.log('data', data)
   console.log('err', error)
+
+  if (error){
+    handleVisibleForm(false)
+    return (
+      <>
+        <div className="boxform">
+          <VscError size={30}/>
+          <h1>Opa!!</h1>
+          <p>estamos enfrentando problemas aqui, tente novamente em alguns instantes.</p>
+          <span className='spanTratado' onClick={() => resetPage()}>Recarregar página</span>
+        </div>
+      </>
+    )
+  }
+
+  if (isPosting){
+    handleVisibleForm(false)
+    return (
+      <>
+        <div className="boxform">
+          <VscLoading id='loading' size={30} />
+          <p>Enviando formulário...</p>
+        </div>
+      </>
+    )
+  }
+
+  if (isPosted){
+    handleVisibleForm(false)
+    return (
+      <>
+        <div className="boxform">
+          <SlCheck id='success' size={50} />
+          <h1>Formulário enviado!!</h1>
+          <p>Nós entraremos em contato com você em breve</p>
+        </div>
+      </>
+    )
+  }
 
   if (isFormOpen) {
     return (
@@ -90,7 +135,7 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
                 {errors.email && (<span>{errors.email.message}</span>)}
               </div>
             </div>
-            <input type="submit" value="enviar" />
+            <input className='button' type="submit" value="enviar" />
           </form>
         </div>
       </>
@@ -102,7 +147,7 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
       <div className="boxform">
         <h1>Quer conhecer os produtos mais intensos?</h1>
         <p>Preencha o formulário abaixo e conheça mais os nossos produtos</p>
-        <button onClick={() => handleStatusForm()}>Formulário</button>
+        <button className='button' onClick={() => handleStatusForm()}>Formulário</button>
       </div>
     </>
   )

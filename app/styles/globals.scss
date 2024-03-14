@@ -52,7 +52,7 @@ a {
   }
 }
 
-button{
+.button{
   @include buttonaction($tam-font-18);
   width: 15rem;
 
