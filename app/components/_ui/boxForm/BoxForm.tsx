@@ -51,9 +51,6 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
     window.location.reload()
   }
 
-  console.log('data', data)
-  console.log('err', error)
-
   if (error){
     handleVisibleForm(false)
     return (
@@ -87,9 +84,9 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
         <div className="boxform">
           <SlCheck id='success' size={50} />
           <h1>Formulário enviado!!</h1>
-          <p className='pTratado'>Nós entraremos em contato com você em breve</p>
+          <p className='pTratado'>Confira nossos produtos</p>
           <div className='boxform__btnTratado'>
-          <Link href='https://www.omegascreen.com.br/'><button className='button'>Site Oficial</button></Link>
+          <Link href='https://www.omegascreen.com.br/produtos/Linha%20Base%20%C3%81gua'><button className='button'>Site Oficial</button></Link>
           </div>
         </div>
       </>
