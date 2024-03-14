@@ -73,7 +73,7 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
       <>
         <div className="boxform">
           <VscLoading id='loading' size={30} />
-          <p>Enviando formulário...</p>
+          <p className='pTratado'>Enviando formulário...</p>
         </div>
       </>
     )
@@ -86,7 +86,7 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
         <div className="boxform">
           <SlCheck id='success' size={50} />
           <h1>Formulário enviado!!</h1>
-          <p>Nós entraremos em contato com você em breve</p>
+          <p className='pTratado'>Nós entraremos em contato com você em breve</p>
         </div>
       </>
     )
