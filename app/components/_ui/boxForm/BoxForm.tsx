@@ -13,7 +13,7 @@ import { SlCheck } from 'react-icons/sl'
 export interface FormTypes {
   name: string,
   telephone: string,
-  email: string
+  email?: string | undefined
 }
 
 type BoxContentProps = {
@@ -134,7 +134,7 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
                   id='email'
                   type="email"
                 />
-                {errors.email && (<span>{errors.email.message}</span>)}
+                {/* {errors.email && (<span>{errors.email.message}</span>)} */}
               </div>
             </div>
             <input className='button' type="submit" value="enviar" />

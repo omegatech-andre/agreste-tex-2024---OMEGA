@@ -12,5 +12,4 @@ export const formSchema = yup.object().shape({
   email: yup
     .string()
     .lowercase()
-    .required('Obrigatório')
 })
