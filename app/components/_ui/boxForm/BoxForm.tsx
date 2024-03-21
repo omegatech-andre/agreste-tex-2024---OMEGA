@@ -8,7 +8,7 @@ import usePost from '@/app/hooks/usePost'
 import { MdKeyboardBackspace } from 'react-icons/md'
 import { VscError, VscLoading } from 'react-icons/vsc'
 import { SlCheck } from 'react-icons/sl'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 export interface FormTypes {
   name: string,
@@ -86,7 +86,8 @@ export default function BoxForm({ statusForm, handleVisibleForm }: BoxContentPro
           <h1>Formulário enviado!!</h1>
           <p className='pTratado'>Confira nossos produtos</p>
           <div className='boxform__btnTratado'>
-          <Link href='https://www.omegascreen.com.br/produtos/Linha%20Base%20%C3%81gua'><button className='button'>Site Oficial</button></Link>
+            {/* <Link href='https://www.omegascreen.com.br/produtos/Linha%20Base%20%C3%81gua'><button className='button'>Site Oficial</button></Link> */}
+            <button className='button' onClick={resetPage}>Novo cadastro</button>
           </div>
         </div>
       </>

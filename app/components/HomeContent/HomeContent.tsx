@@ -1,13 +1,13 @@
 'use client'
 import { useState } from 'react'
 import './index.scss'
-import BarProgress from '../_ui/barProgress/BarProgress'
+// import BarProgress from '../_ui/barProgress/BarProgress'
 import { SiInstagram, SiLinkedin, SiYoutube, SiTiktok, SiWhatsapp, SiFacebook } from "react-icons/si"
 import Link from 'next/link'
 import BoxForm from '../_ui/boxForm/BoxForm'
 
 export default function HomeContent() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const [formIsHidden, setFormIsHidden] = useState(false)
 
   const toogleFunction = () =>{
@@ -38,7 +38,7 @@ export default function HomeContent() {
           <div className="bot">
             <h1>Ômega Screen Indústria</h1>
             <p>Sua vida com mais cor e intesidade</p>
-            <BarProgress />
+            {/* <BarProgress /> */}
           </div>
         </div>
         <img className='wallpaperbot' src="./wallpaper-bottom-oficial.png" alt="wallpaper" />
